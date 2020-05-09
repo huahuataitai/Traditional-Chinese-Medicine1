@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>用户登录_中医文化网</title>
+    <link rel="stylesheet" href="css/ex06.css">
+    <style>
+        * { margin: 0; padding: 0; }
+        html { height: 100%; }
+        body { height: 100%; background: #fff url(images/backgroud.jpg) 50% 50% no-repeat; background-size: cover;}
+        .dowebok { position: absolute; left: 50%; top: 50%; width: 430px; height: 530px; margin: -210px 0 0 -215px; border: 1px solid #8b4513; border-radius: 20px; overflow: hidden;}
+        .logo { width: 104px; height: 104px; margin: 50px auto 80px; background: url(images/login.png) 0 0 no-repeat; }
+        .form-item { position: relative; width: 360px; margin: 0 auto; padding-bottom: 30px;}
+        .form-item input { width: 288px; height: 48px; padding-left: 70px; border: 1px solid #8b4513; border-radius: 25px; font-size: 18px; color: #006400; background-color: transparent; outline: none;font-family:方正苏新诗柳楷简体; }
+        .form-item button { width: 360px; height: 50px; border: 0; border-radius: 25px; font-size: 18px; color: #006400; outline: none; cursor: pointer; background-color: #b8860b;font-family:方正苏新诗柳楷简体;  }
+        #username { background: url(images/emil.png) 20px 14px no-repeat; color: #006400;}
+        #password { background: url(images/password.png) 23px 11px no-repeat; color: #006400;}
+        .tip { display: none; position: absolute; left: 20px; top: 52px; font-size: 14px; color: #006400; }
+        .reg-bar { width: 360px; margin: 20px auto 0; font-size: 14px; overflow: hidden;}
+        .reg-bar a { color: #006400; text-decoration: none; }
+        .reg-bar a:hover { text-decoration: underline; }
+        .reg-bar .reg { float: left; color: #006400; }
+        .reg-bar .forget { float: right; color: #006400; }
+        .dowebok ::-webkit-input-placeholder { font-size: 18px; line-height: 1.4; color: #006400;}
+        .dowebok :-moz-placeholder { font-size: 18px; line-height: 1.4; color: #006400;}
+        .dowebok ::-moz-placeholder { font-size: 18px; line-height: 1.4; color: #006400;}
+        .dowebok :-ms-input-placeholder { font-size: 18px; line-height: 1.4; color: #006400;}
+
+        @media screen and (max-width: 500px) {
+            * { box-sizing: border-box; }
+            .dowebok { position: static; width: auto; height: auto; margin: 0 30px; border: 0; border-radius: 0; }
+            .logo { margin: 50px auto; }
+            .form-item { width: auto; }
+            .form-item input, .form-item button, .reg-bar { width: 100%; }
+        }
+
+        footer{
+    width: 100%;
+    height: 80px;
+    background-color:#fff;
+    text-align:center;
+}
+footer p{
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    font-size: 14px;
+}
+    </style>
+</head>
+<body style="position: relative;">
+      
+<div class="div">
+<div class="mainMenu" style="background:url(images/nav3.jpg) no-repeat;position: absolute; ">
+<div  id="first" style="float: left;"> <img src="images/logo.png" alt=""></div>
+    <div class="menu"><a href="index.html"><strong>本站首页</strong></a></div>
+    <div class="menu"><a href="ex01.html"><strong>中医简史</strong></a></div>
+    <div class="menu"><a href="ex02.html"><strong>中医特色</strong></a></div>
+    <div class="menu"><a href="ex03.html"><strong>中医常识</strong></a></div>
+    <div class="menu"><a href="ex04.html"><strong>中医刮痧</strong></a></div>
+    <div class="menu"><a href="ex05.html"><strong>中医新闻</strong></a></div>
+    <div class="menu"><a href="ex06.html"><strong>用户登录</strong></a></div>
+</div>
+</div>
+<div id="main" >
+ <header>
+    <div class="dowebok">
+        <div class="logo"></div>
+        <div class="form-item">
+            <input id="username" type="text" autocomplete="off" placeholder="邮箱">
+            <p class="tip">请输入合法的邮箱地址</p>
+        </div>
+        <div class="form-item">
+            <input id="password" type="password" autocomplete="off" placeholder="登录密码">
+            <p class="tip">邮箱或密码不正确</p>
+        </div>
+        <div class="form-item"><button id="submit">登 录</button></div>
+        <div class="reg-bar">
+            <a class="reg" href="javascript:">立即注册</a>
+            <a class="forget" href="javascript:">忘记密码</a>
+        </div>
+    </div>
+    <script src="images/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('input').val('')
+            $('#submit').on('click', function () {
+                $('.tip').show()
+            })
+        })
+    </script>
+    </div>
+</header>
+    <footer style="background: url(images/f5.jpg) no-repeat;" class="fixed-bottom">
+        <br><span>首页</span> | <span class="STYLE1">关于</span> | <span>档案</span> | <span>服务</span> | <span class="STYLE1">联系</span><br />
+     <span>Copyright © 2020  中医主页 </span> |  <span>Designed by 第七组</span>  
+    </footer>
+    <script type="text/javascript" src="js/index.js">
+</script>
+    <script type="text/javascript" src="js/nav.js">
+</script>
+</body>
+</html>
